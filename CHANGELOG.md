@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.0...v1.0.1) (2021-11-11)
+
+
+### Bug Fixes
+
+* licensing information ([0e52e15](https://github.com/CoCreate-app/CoCreate-keepalived/commit/0e52e1515a34526bdc7cb9ef85075317b99999bc))
+* update readme ([b790ea1](https://github.com/CoCreate-app/CoCreate-keepalived/commit/b790ea10ebc80fd73eabf8b8d124de5c419b9c7b))
+
 # 1.0.0 (2021-11-01)
 
 
