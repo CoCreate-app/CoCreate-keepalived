@@ -1,5 +1,15 @@
 # ignore
+# ignore
 node_modules
-dist/*
-!dist/*.min.js
+dist
 .npmrc
+yarn.lock
+package-lock.json
+
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
