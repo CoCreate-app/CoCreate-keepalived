@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.1...v1.0.2) (2021-11-12)
+
+
+### Bug Fixes
+
+* update secerts names ([d3426d2](https://github.com/CoCreate-app/CoCreate-keepalived/commit/d3426d2ebce3a36daaba64ccd7c5fd33076a1eb6))
+
 ## [1.0.1](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.0...v1.0.1) (2021-11-11)
 
 
