@@ -28,7 +28,7 @@ on:
           For example, "10.0.0.1,10.0.0.2"
           This must be non-empty if keepalived is deployed.
         default: ''
-        required: false
+        required: true
       eip_alloc_id:
         description: |
           The allocation ID of elastic IP in AWS used as the virtual IP in keepalived.
