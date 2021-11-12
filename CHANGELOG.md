@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.2...v1.0.3) (2021-11-12)
+
+
+### Bug Fixes
+
+* remove if condition for non existing input ([bdb9bde](https://github.com/CoCreate-app/CoCreate-keepalived/commit/bdb9bde61dce62cc85ec85adc7a17b9dcac9cf76))
+
 ## [1.0.2](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.1...v1.0.2) (2021-11-12)
 
 
