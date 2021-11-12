@@ -80,8 +80,8 @@ jobs:
     # Replace ConfigMap of auto scale groups with input value
     - name: Deploy aws secret
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWSACCESSKEYID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWSSECERTACCESSKEY }}
       run: |
         ENCODE_ID=$(echo ${AWS_ACCESS_KEY_ID} | tr -d '\n' | base64 | tr -d '\n')
         sed -i "s/{{ AWS_ACCESS_KEY_ID }}/${ENCODE_ID}/g" ${GITHUB_WORKSPACE}/manifests/aws-secret.yaml
