@@ -106,7 +106,7 @@ jobs:
         AWS_DEFAULT_REGION: ${{ github.event.inputs.aws_default_region }}
         PRIMARY_NIC_NAME: ${{ github.event.inputs.primary_nic_name }}
         ENV_EIP_ALLOC_ID: ${{ secrets.EIP_ALLOC_ID }}
-      if: ${{ contains(github.event.inputs.deploy_components, 'keepalived') }}
+      # if: ${{ contains(github.event.inputs.deploy_components, 'keepalived') }}
       run: |
         set -e
         if [ "$ALL_PPERS_IP" == '' ]
