@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.4...v1.0.5) (2021-11-13)
+
+
+### Bug Fixes
+
+* use secrets to compute vars values ([c6bf837](https://github.com/CoCreate-app/CoCreate-keepalived/commit/c6bf837a13476bdbc7a842c85000ad50e9c331c6))
+
 ## [1.0.4](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.3...v1.0.4) (2021-11-13)
 
 
