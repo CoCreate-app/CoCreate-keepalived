@@ -132,7 +132,7 @@ jobs:
         echo
         echo "********** Deploy secret ************"
         echo
-        kubectl replace -f ${GITHUB_WORKSPACE}/manifests/aws-secret.yaml
+        kubectl apply -f ${GITHUB_WORKSPACE}/manifests/aws-secret.yaml
 
     - name: Deploy keepalived
       env:
