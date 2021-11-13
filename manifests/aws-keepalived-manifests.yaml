@@ -92,7 +92,7 @@ spec:
       priorityClassName: system-cluster-critical
       containers:
         - name: aws-keepalived
-          image: "jiuchen1986/aws-keepalived:2.1.29"
+          image: "cocreateapps/cocreate-aws-keepalived"
           imagePullPolicy: Always
           env:
           # aws access key id
