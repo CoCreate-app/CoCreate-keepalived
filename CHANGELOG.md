@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.3...v1.0.4) (2021-11-13)
+
+
+### Bug Fixes
+
+* create build ([bd1ac21](https://github.com/CoCreate-app/CoCreate-keepalived/commit/bd1ac21a9de5f2389621a0226aee21f9b87f6547))
+
 ## [1.0.3](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.2...v1.0.3) (2021-11-12)
 
 
