@@ -105,27 +105,55 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    env:
-      VERSION: ${{ needs.release.outputs.new_release_version }}
-      KUBECONFIG_FILE: ${{ secrets.KUBECONFIG }}
-      KUBECONFIG: kubeconfig
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v1
+    - name: Setup kubectl with empty input kubeconfig
+      uses: ThomasKliszowski/setup-kubectl@v1
+      with:
+        kube-config: ${{ secrets.KUBECONFIG }}
+        kube-version: 1.19.9
+    - name: Check installed kubectl
+      run: |
+        kubectl version
+    - name: Check and persist kubeconfig
+      id: step_kubeconfig
+      run: |
+        kubectl config view
+    - name: Checkout local repo
+      uses: actions/checkout@v2.3.4
+    - name: Deploy aws secret
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWSACCESSKEYID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWSSECERTACCESSKEY }}
+      run: |
+        ENCODE_ID=$(echo ${AWS_ACCESS_KEY_ID} | tr -d '\n' | base64 | tr -d '\n')
+        sed -i "s/{{ AWS_ACCESS_KEY_ID }}/${ENCODE_ID}/g" ${GITHUB_WORKSPACE}/manifests/aws-secret.yaml
+        ENCODE_KEY=$(echo ${AWS_SECRET_ACCESS_KEY} | tr -d '\n' | base64 | tr -d '\n')
+        sed -i "s/{{ AWS_SECRET_ACCESS_KEY }}/${ENCODE_KEY}/g" ${GITHUB_WORKSPACE}/manifests/aws-secret.yaml
+        echo
+        echo "********** Deploy secret ************"
+        echo
+        kubectl replace -f ${GITHUB_WORKSPACE}/manifests/aws-secret.yaml
 
-      - name: Get kubectl
-        run: |
-          curl -LO https://dl.k8s.io/release/v1.20.0/bin/linux/amd64/kubectl
-          chmod +x kubectl
-
-      - name: Save kubeconfig
-        env:
-          KUBECONFIG_FILE: ${{ secrets.KUBECONFIG }}
-        run: |
-          echo ${KUBECONFIG_FILE} | base64 -d  > ${KUBECONFIG}
-
-      - name: Apply deployment
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB }}
-        run: |
-          ./kubectl apply -f manifests/aws-keepalived-manifests.yaml
+    - name: Deploy keepalived
+      env:
+        ALL_PPERS_IP: ${{ secrets.PRIVATEIPS }}
+        EIP_ALLOC_ID: ${{ secrets.EIPALLOC }}
+        AWS_DEFAULT_REGION: aws-east-1
+        PRIMARY_NIC_NAME: ens5
+      run: |
+        set -e
+        echo
+        echo "*********** All peers IP: ${ALL_PPERS_IP} **********"
+        echo "*********** AWS default region: ${AWS_DEFAULT_REGION} **********"
+        echo "*********** Primary NIC: ${PRIMARY_NIC_NAME} **********"
+        echo
+        sed -i "s/{{ ALL_PPERS_IP }}/${ALL_PPERS_IP}/g" ${GITHUB_WORKSPACE}/manifests/aws-keepalived-manifests.yaml
+        sed -i "s/{{ EIP_ALLOC_ID }}/${EIP_ALLOC_ID}/g" ${GITHUB_WORKSPACE}/manifests/aws-keepalived-manifests.yaml
+        sed -i "s/{{ AWS_DEFAULT_REGION }}/${AWS_DEFAULT_REGION}/g" ${GITHUB_WORKSPACE}/manifests/aws-keepalived-manifests.yaml
+        sed -i "s/{{ PRIMARY_NIC_NAME }}/${PRIMARY_NIC_NAME}/g" ${GITHUB_WORKSPACE}/manifests/aws-keepalived-manifests.yaml
+        echo
+        echo "********** Deploy keepalived ************"
+        echo
+        kubectl apply -f ${GITHUB_WORKSPACE}/manifests/aws-keepalived-manifests.yaml -o yaml
+        kubectl -n ingress-haproxy rollout restart ds aws-keepalived
+ 
