@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.5...v1.0.6) (2022-02-09)
+
+
+### Bug Fixes
+
+* update CoCreate.config.js, bump @cocreate/docs version ([c418d04](https://github.com/CoCreate-app/CoCreate-keepalived/commit/c418d04a2a7e5cce058545d56d476143333a203a))
+
 ## [1.0.5](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.4...v1.0.5) (2021-11-13)
 
 
