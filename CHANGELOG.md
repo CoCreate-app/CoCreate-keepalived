@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.8...v1.0.9) (2022-02-28)
+
+
+### Bug Fixes
+
+* config docs wildcard * domain ([70ea3a0](https://github.com/CoCreate-app/CoCreate-keepalived/commit/70ea3a071acc6e0f8aa00aab4293f2c144c916ea))
+
 ## [1.0.8](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.7...v1.0.8) (2022-02-16)
 
 
