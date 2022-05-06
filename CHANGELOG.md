@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.9...v1.0.10) (2022-05-06)
+
+
+### Bug Fixes
+
+* update config organization_Id to organization_id ([03e79b7](https://github.com/CoCreate-app/CoCreate-keepalived/commit/03e79b7adf73a88cbba685af7e1be58d2fe4c56b))
+
 ## [1.0.9](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.8...v1.0.9) (2022-02-28)
 
 
