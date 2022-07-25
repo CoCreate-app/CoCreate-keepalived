@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.10...v1.0.11) (2022-07-25)
+
+
+### Bug Fixes
+
+* replaced attribute pass-fetch_value with pass-filter-value ([a53bb9a](https://github.com/CoCreate-app/CoCreate-keepalived/commit/a53bb9a4ef76de003812f4780693d5740f1483dd))
+
 ## [1.0.10](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.9...v1.0.10) (2022-05-06)
 
 
