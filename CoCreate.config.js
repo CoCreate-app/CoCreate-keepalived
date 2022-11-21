@@ -10,7 +10,7 @@ module.exports = {
             "collection": "files",
             "document_id": "6204253f80b409001727b742",
             "key": "src",
-            "data": {
+            "document": {
                 "name": "index.html",
                 "path": "/docs/keepalived/index.html",
                 "domains": [
