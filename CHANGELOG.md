@@ -1,3 +1,10 @@
+## [1.0.16](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.15...v1.0.16) (2022-11-21)
+
+
+### Bug Fixes
+
+* replaced document_id with document._id ([3231ca2](https://github.com/CoCreate-app/CoCreate-keepalived/commit/3231ca2d487e2ff106824bb65b944aa0d63bdca5))
+
 ## [1.0.15](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.14...v1.0.15) (2022-11-21)
 
 
