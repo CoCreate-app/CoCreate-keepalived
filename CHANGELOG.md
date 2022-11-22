@@ -1,3 +1,10 @@
+## [1.0.19](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.18...v1.0.19) (2022-11-22)
+
+
+### Bug Fixes
+
+* workflow docs ([8182f6b](https://github.com/CoCreate-app/CoCreate-keepalived/commit/8182f6b64bf345d0df09c19228ebc4bd5123f37b))
+
 ## [1.0.18](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.17...v1.0.18) (2022-11-22)
 
 
