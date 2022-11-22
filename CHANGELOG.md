@@ -1,3 +1,10 @@
+## [1.0.18](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.17...v1.0.18) (2022-11-22)
+
+
+### Bug Fixes
+
+* apply src: {{source}} to CoCreate.config ([62b2ad0](https://github.com/CoCreate-app/CoCreate-keepalived/commit/62b2ad0e1410cb12830ff60b726a4ce128553abc))
+
 ## [1.0.17](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.16...v1.0.17) (2022-11-21)
 
 
