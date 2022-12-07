@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/keepalived",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "A simple keepalived component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API.",
   "keywords": [
     "keepalived",
@@ -20,7 +20,9 @@
     "html5-framework",
     "javascript-framework"
   ],
-  "publishConfig": { "access": "private" },
+  "publishConfig": {
+    "access": "private"
+  },
   "scripts": {
     "start": "npx webpack --config webpack.config.js",
     "build": "NODE_ENV=production npx webpack --config webpack.config.js",
