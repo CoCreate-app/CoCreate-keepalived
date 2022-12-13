@@ -1,3 +1,10 @@
+## [1.0.35](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.34...v1.0.35) (2022-12-13)
+
+
+### Bug Fixes
+
+* removed un used devDependencies ([5aae19e](https://github.com/CoCreate-app/CoCreate-keepalived/commit/5aae19eda4ccadfc4e6945a7991cb766aa5870fc))
+
 ## [1.0.34](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.33...v1.0.34) (2022-12-13)
 
 
