@@ -1,3 +1,10 @@
+## [1.0.38](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.37...v1.0.38) (2022-12-22)
+
+
+### Bug Fixes
+
+* update demos and bump dependencies ([e217947](https://github.com/CoCreate-app/CoCreate-keepalived/commit/e217947e61b0c6595601cbb0610347f3c4e2f5df))
+
 ## [1.0.37](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.36...v1.0.37) (2022-12-21)
 
 
