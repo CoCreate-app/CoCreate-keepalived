@@ -1,3 +1,10 @@
+## [1.0.44](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.43...v1.0.44) (2022-12-30)
+
+
+### Bug Fixes
+
+* update config sources to use template  braces with entry on src ([6698c98](https://github.com/CoCreate-app/CoCreate-keepalived/commit/6698c98fc49b923c643c91aca0e5b073c9130357))
+
 ## [1.0.43](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.42...v1.0.43) (2022-12-29)
 
 

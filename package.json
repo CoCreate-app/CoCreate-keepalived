@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/keepalived",
-  "version": "1.0.43",
+  "version": "1.0.44",
   "description": "A simple keepalived component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API.",
   "keywords": [
     "keepalived",
