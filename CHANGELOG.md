@@ -1,3 +1,10 @@
+## [1.0.46](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.45...v1.0.46) (2023-01-01)
+
+
+### Bug Fixes
+
+* docs sanbox overflow ([ba68853](https://github.com/CoCreate-app/CoCreate-keepalived/commit/ba68853c4f5a0f2e13c83919e20e9dac90d9f4b1))
+
 ## [1.0.45](https://github.com/CoCreate-app/CoCreate-keepalived/compare/v1.0.44...v1.0.45) (2022-12-31)
 
 
