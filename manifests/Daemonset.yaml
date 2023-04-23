@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: keepalived-vip
+spec:
+  selector:
+    matchLabels:
+      app: keepalived-vip
+  template:
+    metadata:
+      labels:
+        app: keepalived-vip
+#        env: dev
+    spec:
+      hostNetwork: true
+      volumes:
+        - name: config-volume
+          configMap:
+            name: keepalived-conf
+      containers:
+        - name: keepalived
+          image: vakkomkamal/keepalived:v1.0.0
+          imagePullPolicy: IfNotPresent
+#          securityContext:
+#            privileged: true
+          volumeMounts:
+            - name: config-volume
+              mountPath: /tmp/config/
+      nodeSelector:
+        run-ingress: "true"
+#        nodeName: "kamal"
